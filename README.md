@@ -10,7 +10,7 @@ Install Visual Studio Code with below extenstions [some are optional]
     nuget gallery
     material icon theme
 
-    <!-- Angular Language service
+    Angular Language service
     Angular Snippets by John Papa
     Bracket Pair Colorizer
 
@@ -19,7 +19,7 @@ via nuget
 > for Swagger dev interface
 SwashBuckle.AspNetCore.MicrosoftExtensions 
 Swashbuckle.AspNetCore.SwaggerGen  
-Swashbuckle.AspNetCore.SwaggerUI   -->
+Swashbuckle.AspNetCore.SwaggerUI   
 
 
 # setup proj VSC
@@ -67,5 +67,12 @@ git push -u origin main
 % $dotnet ef database update
 % $dotnet ef migrations remove
 
+Run app on diff port:
+Change below in Program.cs
+    app.Run(“http://localhost:3000");
+
+For multiple url,
+    app.Urls.Add("http://localhost:3000");
+    app.Urls.Add("http://localhost:4000");
 
 
