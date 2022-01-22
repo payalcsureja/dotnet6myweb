@@ -80,3 +80,21 @@ For multiple url,
 
 
 
+Minimal APIs in .NET6 supports generating swagger documents using Swashbuckle.
+Here are the steps:
+1. Install the swashbuckler package for asp.net core
+install-package Swashbuckle.AspNetCore
+
+or 
+
+Swashbuckle.AspNetCore.Swagger  
+Swashbuckle.AspNetCore.SwaggerGen  
+Swashbuckle.AspNetCore.SwaggerUI  
+
+2. Inject the swagger services in your WebApplication builder.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+3. Use Swagger in your application by adding the middleware to render the Swagger UI.
+app.UseSwagger();
+app.UseSwaggerUI();
+Build and run the application and you will be able to see the swagger UI on /swagger/index.html

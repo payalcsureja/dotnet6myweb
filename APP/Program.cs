@@ -7,7 +7,13 @@ builder.Services.AddDbContext<BooksDB>(options =>{
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); 
 });
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapGet("/books", async (BooksDB db) =>
     await db.Books.ToListAsync()
