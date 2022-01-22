@@ -1,3 +1,6 @@
+#ref: https://medium.com/geekculture/minimal-apis-in-net-6-a-complete-guide-beginners-advanced-fd64f4da07f5
+https://github.com/csehammad/MinimalAPIDemo/blob/main/DB/AuthorsDB_Script.sql
+
 # Pre req: 
 Install .net 6 (.net 6 cli)
 Install node.js, npm [optional]
@@ -74,5 +77,6 @@ Change below in Program.cs
 For multiple url,
     app.Urls.Add("http://localhost:3000");
     app.Urls.Add("http://localhost:4000");
+
 
 
